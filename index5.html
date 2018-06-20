@@ -39,11 +39,15 @@
       $.ajax({
         url: queryURL,
         method: "GET",
-        dataType: 'json',
+        // data: cityZip,
+        dataType: 'jsonp'
         // - using this erases failure to load.
         // cache: false,
+      }).then(function(response) {
+        var results = response.data;
       })
       });
+
 </script>
 </body>
 </html>
