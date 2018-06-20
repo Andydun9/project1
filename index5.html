@@ -1,11 +1,49 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>The Brew Finder</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js">
+  <meta charset="utf-8">
+  <title>It's Giphy Time!!</title>
 </head>
+
 <body>
-<script src="assets/javascript/game.js"></script>
+  <div id="comedianButtons">
+  </div>
+<br>
+  <div class="row">
+    <div class="input-field col s6">
+      <input id="zipCode" type="number">
+      <label class="active" for="ZipCode">Enter in your Zip Code</label>
+    </div>
+  </div>
+    
+  <button class="btn waves-effect waves-light" type="submit" name="action" id="submit-button">Submit
+    <i class="material-icons right"></i>
+  </button>
+        
+<div id="results"></div>
+<br>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+  
+    $("#submit-button").on("click", function () {
+      var cityZip = $("#zipCode");
+      console.log(cityZip);
+      var Zip = cityZip [0].value;
+      var queryURL = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=brewery+"+ 
+      Zip + "+food&sensor=false&location=40.67,-73.94&radius=100&key=AIzaSyAxmDmflbG6AVvQ_RoEbLmt6AWnSoTVMvA";
+      console.log(queryURL);
+      console.log(Zip);
+
+      $.ajax({
+        url: queryURL,
+        method: "GET",
+        dataType: 'jsonp',
+        // - using this erases failure to load.
+        // cache: false,
+      })
+      });
+</script>
 </body>
 </html>
