@@ -3,11 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <title>It's Giphy Time!!</title>
+  <title>API for Google Places</title>
 </head>
 
 <body>
-  <div id="comedianButtons">
+  <div id="cButtons">
   </div>
 <br>
   <div class="row">
@@ -39,9 +39,13 @@
       $.ajax({
         url: queryURL,
         method: "GET",
-        dataType: 'jsonp',
-        // - using this erases failure to load.
-        // cache: false,
+        dataType: 'jsop',
+        // contentType: 'application/json'
+        // jsonpCallback: 'callback'
+        // cache: false
+      })
+      .then (function(response){
+        console.log(response);
       })
       });
 </script>
