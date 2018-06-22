@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>API for Google Places</title>
+  <title>Microbrewery Finder</title>
 </head>
 
 <body>
@@ -33,6 +33,7 @@
       var Zip = cityZip [0].value;
       var queryURL = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=brewery+"+ 
       Zip + "+food&sensor=false&location=40.67,-73.94&radius=100&key=AIzaSyAxmDmflbG6AVvQ_RoEbLmt6AWnSoTVMvA";
+      // additional AIzaSyAkrl0esQNnIWcaETtoJvVAJle7SKXzH4w
       console.log(queryURL);
       console.log(Zip);
 
@@ -48,6 +49,7 @@
         console.log(response);
       })
       });
+
 </script>
 </body>
 </html>
