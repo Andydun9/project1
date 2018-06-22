@@ -4,40 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
-    <!-- <link rel="stylesheet" href="assets/css/reset.css" type="text/css"> -->
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-    <script type="text/javascript" src="assets/javaScript/"></script>
- <title>brewFinder</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Krona+One" rel="stylesheet">
+
+
+    <title>Microbrewery Finder</title>
 </head>
-
-
-<header>
-    <h1>brewFinder</h1>
-
-    <h2>Your Spot to Find Local Breweries</h2>
-
-</header>
-
 <body>
-
-
-  <div class="row">
-    <div class="input-field col s6">
-      <input value="Alvin" id="zipCode" type="number" class="validate" >
-      <label class="active" for="ZipCode">Enter in your Zip Code</label>
+<div class="container" id="landing-page">
+    <div class="row section">
+    <h1>brewFinder <img src="https://png.icons8.com/ios/50/000000/beer.png" class="icon"></h1>
+    <div class="divider"></div>
     </div>
-  </div>
-    
-  <button class="btn waves-effect waves-light" type="submit" name="action" >Submit
-    <i class="material-icons right"></i>
-  </button>
-        
-<div id="results"></div>
-
-
+<div class="row section">
+<h4>What we do</h4>
+<span>Find local microbreweries based on the user's zip code. Once your zip code is entered brewFinder will provide you with 10 breweries in the 
+    desginated zip code with basic contact information and [REVIEW SITE'S] ratings. 
+</span>
+</div>
+<div class="row section">
+<h5>At least 21 years old?</h5>
+    <a class="waves-effect waves-teal btn-flat" id="yes">Yes</a>
+    <a class="waves-effect waves-teal btn-flat" id="no">No</a>
+</div>
+ </div>   
 </body>
-   
+<script type="text/javascript" src="assets/javaScript/app.js"></script>
 </html>
