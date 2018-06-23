@@ -5,3 +5,8 @@ h1 {
     font-family: 'Gochi Hand', cursive;
     font-size: 72px;
 }
+
+#header {
+    font-size: 4.2rem;
+    font-weight: 400;
+}
