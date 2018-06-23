@@ -58,13 +58,5 @@ var noButton = $('#no').on('click', function () {
 var deadPage = function Redirect() {
     window.location = "https://en.wikipedia.org/wiki/Shirley_Temple_(beverage)";
 }
-
-// Spotify
-var token = "BQCoyr4JyNpokBwxCsprCe640BmGxMzn3EA3IZRt4sQTJbMAHV6dyYF-I7AWAub8KH05HRz0y5MdkkDLh0C3ogypwSXWNfTZYR7qFb34RXqgQhRxqOnC1L3bIwMtjtwNw4kXGqsFNxpNV7ymIB1V7jjDuARdXevv1w";
-
-// define window
-window.onSpotifyWebPlaybackSDKReady = () => {
-    // You can now initialize Spotify.Player and use the SDK
-  };
-  
+ 
 });
