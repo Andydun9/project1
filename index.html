@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Krona+One" rel="stylesheet">
 
 
-    <title>Micro-Brewery Finder</title>
+    <title>Microbrewery Finder</title>
 </head>
-<body>
-<div id="landing-page">
-    <h1>Micro-Brewery Finders</h1>
-
-    <form>
-            Search your zipcode:<br>
-            <input type="number" name="zipcode">
-    </form>
-
-<button id="submit">submit</button>
-
-</div>
+<body class="blue-grey darken-2" >
     
+<div class="container grey" id="landing-page">
+    <div class="container grey darken-3" id="h1">
+    <h1>  brewFinder <img src="https://png.icons8.com/ios/50/000000/beer.png" class="icon"></h1>
+    <div class="divider"></div>
+    </div>
+<div class="row section">
+<h4>What we do</h4>
+<span>Find local microbreweries based on the user's zip code. Once your zip code is entered brewFinder will provide you with 10 breweries in the 
+    desginated zip code with basic contact information and [REVIEW SITE'S] ratings. 
+</span>
+</div>
+<div class="row section">
+<h5>Are you 21 or older?</h5>
+    <a class="waves-effect waves-teal btn-flat" id="yes">Yes</a>
+    <a class="waves-effect waves-teal btn-flat" id="no">No</a>
+</div>
+ </div> 
 </body>
 </html>
