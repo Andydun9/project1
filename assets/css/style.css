@@ -1,6 +1,7 @@
 h1 {
     font-family: 'Krona One', sans-serif;
 }
+
 #confirmAge {
     font-family: 'Gochi Hand', cursive;
     font-size: 72px;
@@ -9,4 +10,23 @@ h1 {
 #header {
     font-size: 4.2rem;
     font-weight: 400;
+}
+h2 {
+    font-size: 18px;
+}
+.weather {
+    padding-top: 10%;
+    text-align: center;
+}
+h3 {
+    font-size: 22px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.city {
+    font-size: 20px;
+    padding-top: 20px;
+}
+.temp {
+    font-size: 18px;
+    padding-top: 10px;
 }

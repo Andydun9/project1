@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script> 
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
   <link rel="stylesheet" href="assets/css/reset.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Krona+One|Gochi+Hand" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Krona+One|Gochi+Hand" rel="stylesheet">
 
 
- <title>brewFinder</title>
+  <title>brewFinder</title>
 </head>
 
 
-  <div class="container" id="results-page">
-    <div class="row section">
-    <h1 id="header">brewFinder <img src="https://png.icons8.com/ios/50/000000/beer.png" class="icon"></h1>
+<div class="container" id="results-page">
+  <div class="row section">
+    <h1 id="header">brewFinder
+      <img src="https://png.icons8.com/ios/50/000000/beer.png" class="icon">
+    </h1>
     <div class="divider"></div>
-    </div>
+  </div>
+
+  <body>
 
     <h2>Your Spot to Find Local Breweries</h2>
 
-
-<body>
-
-
-  <div class="row">
-    <div class="input-field col s6">
-      <input id="zipCode" type="number" class="validate" id="zip-code">
-      <label class="active" for="ZipCode">Enter in your Zip Code</label>
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="zipCode" type="number" class="validate" id="zip-code">
+        <label class="active" for="ZipCode">Enter in your Zip Code</label>
+      </div>
     </div>
-  </div>
-  
-<!--  button to match the landing page button style -->
-  <button class="waves-effect waves-teal btn-flat" type="submit" name="action" id="submit-button">Submit
-    <i class="material-icons right"></i>
-  </button>
-        
-<div id="results"></div>
 
-<!-- weather -->
-<div class="city"></div>
-<div class="temp"></div>
+    <!--  button to match the landing page button style -->
+    <button class="waves-effect waves-teal btn-flat" type="submit" name="action" id="submit-button">Submit
+      <i class="material-icons right"></i>
+    </button>
 
-</body>
-<script type="text/javascript" src="assets/javaScript/brew.js"></script>
+    <div id="results"></div>
+
+    <!-- weather -->
+    <div class="weather">
+      <h3>We know beer is in the forecast, but let's see how your day is going to be!</h3>
+      <div class="city"></div>
+      <div class="temp"></div>
+    </div>
+  </body>
+  <script type="text/javascript" src="assets/javaScript/brew.js"></script>
 
 </html>

@@ -36,12 +36,14 @@
   // linking the zip when it's entered
 $('#submit-button').on('click', function () {
     console.log("#submit-button");
-    var input = $('#zipCode').val().trim();
-    console.log(input);
+    // var input = $('#zipCode').val().trim();
+    // console.log(input);
+    var Zip = $('#zipCode').val().trim();
+    console.log(Zip);
 
     //  Weather API
     var weatherAPI = "7f2360e2ae279def0b500b9f28054641";
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + Zip + "&appid=" + weatherAPI;
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + Zip + "&units=imperial&appid=" + weatherAPI;
 
 
     // AJAX call
@@ -53,10 +55,11 @@ $('#submit-button').on('click', function () {
         console.log(response);
 
         // transferring content to HTML
-        $(".city").html("<h2>" + response.name + "Weather Details</h2>");
-        $(".temp").text("Temperature (F)" + response.main.temp);
+        $(".city").html("<h2>" + response.name + "Temperature</h2>");
+        $(".temp").text(response.main.temp + "F");
 
         // Log data into console
         console.log("Temperature (F):" + response.main.temp);
+
     })
 });
