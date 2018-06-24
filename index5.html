@@ -1,55 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
+  <title>Place searches</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <meta charset="utf-8">
-  <title>Microbrewery Finder</title>
+  <style>
+    #map {
+      height: 100%;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript"></script>
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxmDmflbG6AVvQ_RoEbLmt6AWnSoTVMvA&libraries=places" ; async
+    defer></script>
+
 </head>
 
 <body>
-  <div id="cButtons">
-  </div>
-<br>
+
   <div class="row">
     <div class="input-field col s6">
       <input id="zipCode" type="number">
       <label class="active" for="ZipCode">Enter in your Zip Code</label>
     </div>
   </div>
-    
+
   <button class="btn waves-effect waves-light" type="submit" name="action" id="submit-button">Submit
     <i class="material-icons right"></i>
   </button>
-        
-<div id="results"></div>
-<br>
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript">
-  
-    $("#submit-button").on("click", function () {
-      var cityZip = $("#zipCode");
-      console.log(cityZip);
-      var Zip = cityZip [0].value;
-      var queryURL = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=brewery+"+ 
-      Zip + "+food&sensor=false&location=40.67,-73.94&radius=100&key=AIzaSyAxmDmflbG6AVvQ_RoEbLmt6AWnSoTVMvA";
-      // additional AIzaSyAkrl0esQNnIWcaETtoJvVAJle7SKXzH4w
-      console.log(queryURL);
-      console.log(Zip);
+  <br>
+  <br>
+  <br>
+  <br>
+  <div id="map"></div>
+  <script>
 
-      $.ajax({
-        url: queryURL,
-        method: "GET",
-        dataType: 'jsop',
-        // contentType: 'application/json'
-        // jsonpCallback: 'callback'
-        // cache: false
-      })
-      .then (function(response){
-        console.log(response);
-      })
+    $("#submit-button").on("click", function () {
+      getLatLngByZipcode();
+      callback();
+      createFlag();
+      var input = $("#zipCode");
+      var Zip = input[0].valueAsNumber;
+      // console.log(Zip);;
+      // console.log(input);
+    });
+
+    function getLatLngByZipcode(zipcode) {
+      var geocoder = new google.maps.Geocoder();
+      var input = $("#zipCode");
+      var Zip = input[0].value;
+      geocoder.geocode({ 'address': Zip }, function (results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+          var latitude = results[0].geometry.location.lat();
+          var longitude = results[0].geometry.location.lng();
+          alert("Latitude: " + latitude + "\nLongitude: " + longitude);
+          var city = { lat: latitude, lng: longitude };
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: latitude, lng: longitude },
+            zoom: 11
+          });
+          infowindow = new google.maps.InfoWindow();
+          var service = new google.maps.places.PlacesService(map);
+          service.nearbySearch({
+            location: { lat: latitude, lng: longitude },
+            radius: 20000,
+            keyword: ["brewery"],
+            // type: ['bar']
+          }, 
+          callback
+          );
+        };
+      });
+    };
+
+    function callback(results, status) {
+      if (status === google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+          createFlag(results[i]);
+        }
+      }
+    }
+
+
+    function createFlag(place) {
+      var place= { lat: latitude, lng: longitude };
+      var placeLocation = place.geometry.location;
+      console.log(placeLocation);
+      // var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+      // var image= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW1zLV_j4x6DxYE3Syk7k022zZF-V_iCjpQM2uoT-YTKzskYBFtQ"
+      var image = "https://png.icons8.com/ios/50/000000/beer.png";var flag = new google.maps.Marker({
+        map: map,
+        position: place.geometry.location,
+        icon: image
       });
 
-</script>
+      google.maps.event.addListener(flag, 'click', function () {
+        placeName=place.name;
+        placeAddy=place.vicinity;
+        placeRating=place.rating;
+        // open=place.opening_hours.open_now;
+        allInfo="Name: " + placeName + '<br>' + "Address: " + placeAddy + '<br>'+ "Rating: " + placeRating + "/5";
+        // console.log(allInfo);
+        infowindow.setContent(allInfo);
+        infowindow.open(map, this);
+      });
+    }
+  </script>
+
 </body>
+
 </html>
