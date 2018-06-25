@@ -2,6 +2,7 @@ h1 {
     font-family: 'Krona One', sans-serif;
 }
 
+
 #confirmAge {
     font-family: 'Gochi Hand', cursive;
     font-size: 72px;
@@ -30,3 +31,15 @@ h3 {
     font-size: 18px;
     padding-top: 10px;
 }
+
+    #map {
+      height: 80%;
+    }
+
+    html,
+    body {
+      height: 80%;
+      margin: 0;
+      padding: 0;
+    }
+
