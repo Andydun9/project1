@@ -11,8 +11,8 @@ $(document).ready(function () {
   firebase.initializeApp(config);
   var database = firebase.database();
 
-  var zip = []
-  var zipcode = 0
+  var zip = [];
+  var zipcode = 0;
 
     var zip= $("#zipCode").val().trim()
    childSnap.val().zip;
