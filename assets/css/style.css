@@ -14,7 +14,7 @@
 }
 #h1{
     padding:2%;
-    color: #5c6bc0;
+    color: white;
     font-family: 'Krona One', sans-serif;
     font-size: 4.2rem;
     font-weight: 400;
@@ -22,7 +22,12 @@
 #header {
     font-size: 4.2rem;
     font-weight: 400;
-    color: #5c6bc0;
+    color: #d35400;
+}
+
+#resultsDiv,
+#header {
+    margin-left: -20%;
 }
 
 h1 {
@@ -34,9 +39,19 @@ h1 {
     font-size: 72px;
 }
 
+.btn-flat {
+    color: white;
+}
+.back {
+    background-image: url(../images/bar-8755.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 h2 {
     font-size: 18px;
-    color: #303f9f;
+    color: #f39c12;
 }
 
 .weather-field.col.s6 {
@@ -58,6 +73,7 @@ h2 {
 h3 {
     font-size: 28px;
     font-family: 'IM Fell Great Primer SC', serif;
+    color: white;
 }
 .city {
     font-size: 20px;
