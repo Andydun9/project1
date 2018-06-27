@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
     <link rel="stylesheet" href="assets/css/reset.css" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
     <script type="text/javascript" src="assets/javaScript/brew.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxmDmflbG6AVvQ_RoEbLmt6AWnSoTVMvA&libraries=places" ; async
     defer></script>
     <link href="https://fonts.googleapis.com/css?family=Krona+One|Gochi+Hand|IM+Fell+Great+Primer+SC" rel="stylesheet">
@@ -32,15 +35,22 @@
    
 
 
-
-<body>
-  <h2>Your Spot to Find Local Breweries</h2>
-
-  <div class="row">
-    <div class="input-field col s6">
-      <input id="zipCode" type="number" class="validate" id="zip-code">
-      <label class="active" for="ZipCode">Enter in your Zip Code</label>
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="zipCode" type="number" class="validate" id="zip-code">
+        <label class="active" for="ZipCode">Enter in your Zip Code</label>
+      </div>
     </div>
+
+    <!--  button to match the landing page button style -->
+    <button class="waves-effect waves-teal btn-flat" type="submit" name="action" id="submit-button">Submit
+      <i class="material-icons right"></i>
+    </button>
+
+    <div id="results"></div>
+
+
+
   </div>
     
     <!--  button to match the landing page button style -->
@@ -54,16 +64,19 @@
   <br>
         
 <div id="map"></div>
+    
     <!-- weather -->
     <div class="weather">
       <h3>#DrinkingWeather</h3>
       <div class="city"></div>
       <div class="temp"></div>
     </div>
+
   </body>
   </html>
   
 <script type="text/javascript" src="assets/javaScript/brew.js"></script>
+
 </body>
-   
+  
 </html>
