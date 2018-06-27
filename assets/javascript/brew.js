@@ -1,11 +1,11 @@
 $(document).ready(function () {
   var config = {
-      apiKey: "AIzaSyAUo4yqSzNjCfAdx9tGPN3HtgnAmb4zDbk",
-      authDomain: "brewfinder-da560.firebaseapp.com",
-      databaseURL: "https://brewfinder-da560.firebaseio.com",
-      projectId: "brewfinder-da560",
-      storageBucket: "brewfinder-da560.appspot.com",
-      messagingSenderId: "839326870516"
+    apiKey: "AIzaSyAUo4yqSzNjCfAdx9tGPN3HtgnAmb4zDbk",
+    authDomain: "brewfinder-da560.firebaseapp.com",
+    databaseURL: "https://brewfinder-da560.firebaseio.com",
+    projectId: "brewfinder-da560",
+    storageBucket: "brewfinder-da560.appspot.com",
+    messagingSenderId: "839326870516"
   };
 
   firebase.initializeApp(config);
@@ -14,20 +14,20 @@ $(document).ready(function () {
   var zip = [];
   var zipcode = 0;
 
-    var zip= $("#zipCode").val().trim()
-   childSnap.val().zip;
+  var zip = $("#zipCode").val().trim()
+ //childSnap.val().zip;
 
   $("#submit-button").click(function (event) {
     event.preventDefault()
     zip = $("#zipCode").val().trim();
 
-    // console.log(zip) 
+     console.log(zip) 
 
     database.ref().push({
-    zip: zip
-  })
+      zip: zip
+    })
 
-})
+  })
 });
 // end firebase
 
@@ -119,7 +119,7 @@ function callback(results, status) {
         // console.log(allInfo);
         infowindow.setContent(allInfo);
         infowindow.open(map, this);
-      });
-    }
+   });
   }
+ }
 }
