@@ -4,6 +4,13 @@
     padding-bottom:19%;
 
 }
+.bg {
+    background-image: url(../images/alcohol-alcoholic-ale-8800.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 #h1{
     padding:2%;
     color: #5c6bc0;
@@ -11,11 +18,15 @@
     font-size: 4.2rem;
     font-weight: 400;
 }
+#header {
+    font-size: 4.2rem;
+    font-weight: 400;
+    color: #5c6bc0;
+}
 
 h1 {
     font-family: 'Krona One', sans-serif;
 }
-
 
 #confirmAge {
     font-family: 'Gochi Hand', cursive;
@@ -24,7 +35,7 @@ h1 {
 
 h2 {
     font-size: 18px;
-    
+    color: #303f9f;
 }
 
 .weather-field.col.s6 {
@@ -60,14 +71,3 @@ h3 {
     height: 80%;
 }
 
-html,
-body {
-    height: 80%;
-    margin: 0;
-    padding: 0;
-}
-  
-#header {
-    font-size: 4.2rem;
-    font-weight: 400;
-}
