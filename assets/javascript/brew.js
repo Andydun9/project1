@@ -15,7 +15,7 @@ $(document).ready(function () {
   var zipcode = 0
 
     var zip= $("#zipCode").val().trim()
-   childSnap.val().zip;
+
 
   $("#submit-button").click(function (event) {
     event.preventDefault()
@@ -123,3 +123,4 @@ function callback(results, status) {
     }
   }
 }
+// });
