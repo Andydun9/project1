@@ -16,7 +16,6 @@ $(document).ready(function () {
 
     var zip= $("#zipCode").val().trim()
 
-
   $("#submit-button").click(function (event) {
     event.preventDefault()
     zip = $("#zipCode").val().trim();
@@ -123,4 +122,3 @@ function callback(results, status) {
     }
   }
 }
-// });

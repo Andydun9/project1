@@ -1,3 +1,4 @@
+
 #landing-page{
     padding-left: 2%;
     padding-bottom:19%;
@@ -8,3 +9,50 @@
     color: #5c6bc0;
     font-family: 'Krona One', sans-serif;
 }
+
+h1 {
+    font-family: 'Krona One', sans-serif;
+}
+
+
+#confirmAge {
+    font-family: 'Gochi Hand', cursive;
+    font-size: 72px;
+}
+
+#header {
+    font-size: 4.2rem;
+    font-weight: 400;
+}
+h2 {
+    font-size: 18px;
+}
+.weather {
+    padding-top: 10%;
+    text-align: center;
+}
+h3 {
+    font-size: 28px;
+    font-family: 'IM Fell Great Primer SC', serif;
+}
+.city {
+    font-size: 20px;
+    padding-top: 20px;
+}
+.temp {
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+    #map {
+      height: 80%;
+    }
+
+    html,
+    body {
+      height: 80%;
+      margin: 0;
+      padding: 0;
+    }
+
+    
