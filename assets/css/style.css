@@ -1,3 +1,15 @@
+
+#landing-page{
+    padding-left: 2%;
+    padding-bottom:19%;
+
+}
+#h1{
+    padding:2%;
+    color: #5c6bc0;
+    font-family: 'Krona One', sans-serif;
+}
+
 h1 {
     font-family: 'Krona One', sans-serif;
 }
@@ -74,4 +86,7 @@ h3 {
 =======
 
     
+<<<<<<< HEAD
 >>>>>>> aa4c9867211519cdad588ba087e4e368d7b73527
+=======
+>>>>>>> c9a99d8606fbce4e61950b4a7566ef09805d8870
