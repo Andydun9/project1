@@ -14,8 +14,7 @@ $(document).ready(function () {
   var zip = []
   var zipcode = 0
 
-  //   var zip= $("#zipCode").val().trim()
-  //  childSnap.val().zip;
+    var zip= $("#zipCode").val().trim()
 
   $("#submit-button").click(function (event) {
     event.preventDefault()
