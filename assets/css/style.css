@@ -5,11 +5,12 @@
 
 }
 .bg {
-    background-image: url(../images/alcohol-alcoholic-ale-8800.jpg);
+    background-image: url(../images/alcohol-beer-beverage-1128975.jpg);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    color: white;
 }
 #h1{
     padding:2%;
