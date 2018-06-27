@@ -8,6 +8,8 @@
     padding:2%;
     color: #5c6bc0;
     font-family: 'Krona One', sans-serif;
+    font-size: 4.2rem;
+    font-weight: 400;
 }
 
 h1 {
@@ -20,17 +22,27 @@ h1 {
     font-size: 72px;
 }
 
-#header {
-    font-size: 4.2rem;
-    font-weight: 400;
-}
 h2 {
     font-size: 18px;
+    
 }
+
+.weather-field.col.s6 {
+    width:33%;
+}
+
 .weather {
-    padding-top: 10%;
-    text-align: center;
+    /* padding-top: 10%; */
+    text-align: right;
+    margin-left:80%;
+    
 }
+
+#weather{
+    width:30%;
+    margin-left:80%;
+}
+
 h3 {
     font-size: 28px;
     font-family: 'IM Fell Great Primer SC', serif;
@@ -44,49 +56,18 @@ h3 {
     padding-top: 10px;
 }
 
-    #map {
-      height: 80%;
-    }
+#map {
+    height: 80%;
+}
 
-    html,
-    body {
-      height: 80%;
-      margin: 0;
-      padding: 0;
-    }
-<<<<<<< HEAD
-    #confirmAge {
-      font-family: 'Gochi Hand', cursive;
-      font-size: 72px;
-  }
+html,
+body {
+    height: 80%;
+    margin: 0;
+    padding: 0;
+}
   
-  #header {
-      font-size: 4.2rem;
-      font-weight: 400;
-  }
-  h2 {
-      font-size: 18px;
-  }
-  .weather {
-      padding-top: 10%;
-      text-align: center;
-  }
-  h3 {
-      font-size: 28px;
-      font-family: 'IM Fell Great Primer SC', serif;
-  }
-  .city {
-      font-size: 20px;
-      padding-top: 20px;
-  }
-  .temp {
-      font-size: 18px;
-      padding-top: 10px;
-  }
-=======
-
-    
-<<<<<<< HEAD
->>>>>>> aa4c9867211519cdad588ba087e4e368d7b73527
-=======
->>>>>>> c9a99d8606fbce4e61950b4a7566ef09805d8870
+#header {
+    font-size: 4.2rem;
+    font-weight: 400;
+}

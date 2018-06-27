@@ -7,9 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" 
   crossorigin="anonymous"></script>
-  <!-- <link href="https://fonts.googleapis.com/css?family=Krona+One%7CGochi+Hand%7CIM+Fell+Great+Primer+SC" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
-    <link rel="stylesheet" href="assets/css/reset.css" type="text/css">
+    <!-- <link rel="stylesheet" href="assets/css/reset.css" type="text/css"> -->
     <link rel="stylesheet" href="assets/css/results.css" type="text/css">
      <link href="https://fonts.googleapis.com/css?family=Krona+One|Gochi+Hand|IM+Fell+Great+Primer+SC" rel="stylesheet">
     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
@@ -23,8 +22,6 @@
 
 
 <div class = "container ">
-    <h1>brewFinder<img src="https://png.icons8.com/ios/50/000000/beer.png" class="icon"></h1>
-<header>
   <div class="container" id="results-page">
     <div class="row section">
       <h1 id="header">brewFinder
@@ -37,43 +34,29 @@
   <body>
 
    <h2>Your Spot to Find Local Breweries</h2>
-    <div class="row">
-      <div class="input-field col s6">
-        <input id="zipCode" type="number" class="validate" id="zip-code">
-        <label class="active" for="ZipCode">Enter in your Zip Code</label>
+    
+   <div class="container row" id="zipC">
+     <div class="input-field col s6">
+       <input id="zipCode" type="number" class="validate" id="zip-code">
+       <label class="active" for="ZipCode">Enter in your Zip Code</label>
+      </div>
+      
+      <!-- weather -->
+      <div class="weather">
+        <div class="weather-field col s6">
+          <h3 id="weather">#DrinkingWeather </h3>
+          <div class="city"></div>
+          <div class="temp"></div>
+        </div>
       </div>
     </div>
-
-    <!--  button to match the landing page button style -->
-    <button class="waves-effect waves-teal btn-flat" type="submit" name="action" id="submit-button">Submit
-      <i class="material-icons right"></i>
-    </button>
-
-    <div id="results"></div>
-
-
-
-  <div class="container row" id="zipC">
-    <div class="input-field col s6">
-      <input id="zipCode" type="number" class="validate" id="zip-code">
-      <label class="active" for="ZipCode">Enter in your Zip Code</label>
-    </div>
-  
-  <!-- weather -->
-     <div class="weather">
-       <div class="weather-field col s6">
-      <h3 id="weather">#DrinkingWeather </h3>
-      <div class="city"></div>
-      <div class="temp"></div>
-    </div>
-    </div>
-    </div>
-   <div class= "container"> 
-     <!--  button to match the landing page button style -->
-    <button class="waves-effect waves-teal btn-flat" type="submit" name="action" id="submit-button">Submit
-      <i class="material-icons right"></i>
-    </button>
-  
+    <div class= "container"> 
+      <!--  button to match the landing page button style -->
+      <button class="waves-effect waves-teal btn-flat" type="submit" name="action" id="submit-button">Submit
+        <i class="material-icons right"></i>
+      </button>
+      
+      <div id="results"></div>
 </div> 
   <br>
   <br>
