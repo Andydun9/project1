@@ -1,4 +1,6 @@
-# project1
+# project1 
+A group project for University of Arizona's Coding Bootcamp.
+
 <h1> brewFinder Purpose</h1>
 
 The purpose of brewFinder is to locate local microbreweries based on the user's input of a valid zip code. brewFinder also displays 
