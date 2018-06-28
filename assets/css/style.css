@@ -1,6 +1,7 @@
 
     #map {
       height: 80%;
+      margin:5%;
     }
 
     html,
@@ -12,7 +13,7 @@
 h2 {
     font-size: 18px;
     width:100%;
-    padding-left:33%;
+    padding-left:5%;
     color:#f39c12;
 }
 #zipC{
@@ -21,7 +22,9 @@ h2 {
     margin-right:20px;
     
 }
-
+input#zipCode.validate{
+    color:white;
+}
 .weather {
     text-align: right;
     margin-left:90%;

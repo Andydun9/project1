@@ -54,7 +54,7 @@ $('#submit-button').on('click', function () {
 
     $(".city").html("<h2>" + response.name + " Temperature</h2>");
     $(".temp").text(response.main.temp + " ˚F");
-    console.log("Temperature (F):" + response.main.temp);
+    // console.log("Temperature (F):" + response.main.temp);
 
   })
 });
