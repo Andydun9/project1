@@ -24,4 +24,3 @@ var noButton = $('#no').on('click', function () {
 var deadPage = function Redirect() {
     window.location = "https://en.wikipedia.org/wiki/Shirley_Temple_(beverage)";
 }
-
